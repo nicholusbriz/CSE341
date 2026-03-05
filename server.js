@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 // API routes
-app.use('/api/contacts', contactRoutes);
+app.use('/contacts', contactRoutes);
 
 // Start server and connect to database
 async function startServer() {
