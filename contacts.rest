@@ -1,0 +1,64 @@
+### Contacts API Testing File
+### Render URL: https://cse341-ncxu.onrender.com
+
+### Get all contacts
+GET https://cse341-ncxu.onrender.com/contacts
+
+### Get contact by ID (replace with actual _id from database)
+GET https://cse341-ncxu.onrender.com/contacts/{contact-id}
+
+### Create a new contact
+POST https://cse341-ncxu.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "favoriteColor": "",
+  "birthday": ""
+}
+
+### Update a contact (replace with actual ID)
+PUT https://cse341-ncxu.onrender.com/contacts/{contact-id}
+Content-Type: application/json
+
+{
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "favoriteColor": "",
+  "birthday": ""
+}
+
+### Delete a contact (replace with actual ID)
+DELETE https://cse341-ncxu.onrender.com/contacts/{contact-id}
+
+### Test error cases
+
+### Create contact with missing fields
+POST https://cse341-ncxu.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "",
+  "lastName": ""
+}
+
+### Get non-existent contact
+GET https://cse341-ncxu.onrender.com/contacts/507f1f77bcf86cd799439999
+
+### Update non-existent contact
+PUT https://cse341-ncxu.onrender.com/contacts/507f1f77bcf86cd799439999
+Content-Type: application/json
+
+{
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "favoriteColor": "",
+  "birthday": ""
+}
+
+### Delete non-existent contact
+DELETE https://cse341-ncxu.onrender.com/contacts/507f1f77bcf86cd799439999

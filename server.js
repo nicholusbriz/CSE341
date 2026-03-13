@@ -1,5 +1,7 @@
 const express = require('express');
 const { connectToDatabase } = require('./src/database/db');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,6 +19,9 @@ app.get('/', (req, res) => {
 
 // API routes
 app.use('/contacts', contactRoutes);
+
+// Swagger documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Start server and connect to database
 async function startServer() {
