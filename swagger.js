@@ -5,8 +5,8 @@ const doc = {
     title: 'Contacts API',
     description: 'API for managing contacts in a MongoDB database',
   },
-  host: 'localhost:3000',
-  schemes: ['http'],
+  host: 'cse341-ncxu.onrender.com',
+  schemes: ['https'],
   definitions: {
     Contact: {
       type: 'object',
